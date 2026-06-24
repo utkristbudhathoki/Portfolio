@@ -1,116 +1,142 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-.main{
-    border: 1px solid khaki;
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: lightgray;
+}
+
+.container{
+  
+    position: relative;
     width: 100%;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.5)50%, rgba(0, 0, 0, 0.5)50%),url(gj194-wallpaper.cam.webp);
-    background-position: center;
-    background-size: cover;
-    height:100vh;
-}
-
-.navbar{
- border: 1px solid khaki;
-    width: 800px;
-    height: 75px;
-    margin: auto;
-display: flex;
-margin-left: 4px;
-
-
-}
-.icon{
-
-        float: left;
-        height: 70px;
-}
-
-.logo{
-        
-        color: aqua;
-        font-family: Arial, Helvetica, sans-serif;
-        padding-left: 20px;
-        float: left;
-        padding-top: 23px;
-}
-
-.menu{
-    width: 400px;
-    float: left;
-    height: 70px;
-}
-
-ul{
-    
-    float: left;
+    height: 100%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    gap: 100px;
+justify-content:space-between;
 }
 
-ul li{
-    list-style: none;
-    margin-left: 62px;
-    margin-top: 27px;
-    font-size: 14px;
+.back-vid{
+    border:2px solid rgb(20, 98, 208);
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    mix-blend-mode: overlay;
 }
 
-ul li a{
-text-decoration: none;
-color: aqua;
-font-family: Arial, Helvetica, sans-serif;
-font-weight: bold;
-transition: 0.4s ease-in-out;
-}
-
-ul li a:hover{
-    color: rgb(130, 95, 205);
-}
-
-.search{
-    width: 330px;
-    margin-left: 270px;
+header{
+    border:2px solid rgb(66, 183, 20);
     display: flex;
-    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    height: 68px;
+    background-color: rgba(255, 255, 255, 0.123);
+    backdrop-filter: blur(10px);
+    padding: 0 30px;
+box-shadow: 0 0 15px #72a1de68 ;
+z-index: 999;
+}
+
+.left{
+       margin-right: auto; /* for shifting logo box to right side */
+    border:2px solid rgb(35, 9, 139);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 
 }
 
-.srch{
-    font-family: 'Times New Roman', Times, serif;
-    width: 200px;
-    height: 40px;
-    background: transparent;
-    border: 1px solid greenyellow;
-    margin-top: 13px;
-    color: white;
-    border-right:none;
-    font-size: 16px;
-    float: left;
-    padding: 10px;
-    border-bottom-left-radius: 10px;
-    border-top-left-radius: 5px;
+.left img{  /*logo*/
+border-radius: 4%;
+    border:2px solid rgb(44, 243, 9);
+    background-color: #f43a075e;
+    width: 40px;
+    margin: 4px;
+
 }
 
-.btn{
-    width: 100px;
-    height: 40px;
-    background: rgb(136, 80, 80);
-    border: 2px solid forestgreen;
-    margin-top: 13px;
-    color: antiquewhite;
 
-    font-size: 15px;
-    border-bottom-right-radius:5px ;
-    border-top-right-radius: 5px;
+header ul{
+    border:2px solid rgb(237, 9, 9);
+    display: flex;
+    justify-content:space-between;
+    width: 30%;
+    padding: 15px 15px;
+    border-radius: 50px;
+    background-color: rgba(131, 194, 22, 0.3);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px #13d042;
 }
 
-.btn:focus{
-   outline: none; 
+header ul li{ /* for removing bullet point */
+    list-style: none;
 }
 
-.srch:focus{
-    outline: none;
+header ul a{
+    border:2px solid rgb(153, 220, 9);
+    text-decoration: none;
+    color: aliceblue;
+    font-weight: 700;
+    margin: 0 10px;
 }
+
+.box-icons{
+     margin-left: auto; 
+    border:2px solid rgb(225, 15, 116);
+    display: flex;
+    gap: 20px;
+}
+
+.box-icons a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+    border: 2px solid hotpink;
+    text-decoration: none;
+    color: lightgray;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.box-icons a:hover{
+    background-color: antiquewhite;
+    color: black;
+    box-shadow: 0 0 15px forestgreen;
+}
+
+
+
+
+
+
+
+
+@media (max-aspect-ratio:16/9){
+    .back-vid{
+        width: auto;
+        height: 100%;
+    }
+}
+
+@media (min-aspect-ratio: 16/9){
+    .back-vid{
+        width: 100%;
+      height: auto;
+    }
+}
+
